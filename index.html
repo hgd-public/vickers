@@ -4,8 +4,8 @@
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <link rel="shortcut icon" type=image/ico href=./favicon.png>
 <link rel="shortcut icon" sizes=16x16 href=./favicon.png>
-<link rel=apple-touch-icon href=./favicon.png><link rel=stylesheet href=/vickers/css/style.min.c141fe66155b4695d37884cec46aa421bfcb67adf8865a8d00f2e15c34c30919.css><title>Vickers</title>
-</head><body>
+<link rel=apple-touch-icon href=./favicon.png><link rel=stylesheet href=/vickers/css/style.min.2373b36abfe723c67e07ccc530a30e9721d796079e1d2514ef8d507e1c0b24ac.css><title>Vickers</title>
+</head><body data-scroll-animation=true data-spy=scroll data-target=#main-navbar>
 <div class=wrapper>
 <header id=region-header class=region>
 <div class=region-wrapper>
@@ -14,11 +14,11 @@
 <a class=navbar-brand href=#>
 <img width=200 height=55 src=./images/logo.svg>
 </a>
-<button class=navbar-toggler type=button data-toggle=collapse data-target=#navbarNavAltMarkup aria-controls=navbarNavAltMarkup aria-expanded=false aria-label="Toggle navigation">
+<button class=navbar-toggler type=button data-toggle=collapse data-target=#main-navbar aria-controls=navbarNavAltMarkup aria-expanded=false aria-label="Toggle navigation">
 <span class=navbar-toggler-icon></span>
 </button>
-<div class="collapse navbar-collapse" id=navbarNavAltMarkup>
-<div class=navbar-nav>
+<div id=main-navbar class="collapse navbar-collapse">
+<div class="nav navbar-nav">
 <a class=nav-link href=/vickers/#climat>Климат </a>
 <a class=nav-link href=/vickers/#benefits>Преимущества </a>
 <a class=nav-link href=/vickers/#reviews>Отзывы </a>
@@ -38,7 +38,7 @@
 </header>
 <article id=region-content class=region>
 <div class=region-wrapper>
-<div class="block-wrapper product">
+<div class="block-wrapper product" id=climat>
 <div class="block product">
 <div class="wrapper wow fadeInUp">
 <h2>Климат Vickers</h2>
@@ -120,7 +120,7 @@ LED скрытый дисплей
 </div>
 </div>
 </div>
-<div class="block-wrapper benefits">
+<div class="block-wrapper benefits" id=benefits>
 <div class="block benefits">
 <div class="wrapper wow fadeInUp">
 <h2>Преимущества</h2>
@@ -311,7 +311,7 @@ VC-HE 7, 9, 12, 18, 24 - модельный ряд</h3>
 </div>
 </div>
 </div>
-<div class="block-wrapper reviews">
+<div class="block-wrapper reviews" id=reviews>
 <div class="block reviews">
 <div class="wrapper fadeInOnLoad">
 <h2>Отзывы</h2>
@@ -397,7 +397,7 @@ VC-HE 7, 9, 12, 18, 24 - модельный ряд</h3>
 </div>
 </div>
 </div>
-<div class="block-wrapper tech-spec">
+<div class="block-wrapper tech-spec" id=features>
 <div class="block tech-spec">
 <div class="wrapper wow fadeInUp">
 <h2>Технические характеристики</h2>
@@ -663,7 +663,7 @@ VC-HE 7, 9, 12, 18, 24 - модельный ряд</h3>
 </article>
 <footer id=region-footer class=region>
 <div class=region-wrapper>
-<div>
+<div id=contacts>
 <div class=text-center>
 <img class=img-fluid src=./images/map.png>
 </div>
@@ -702,4 +702,4 @@ VC-HE 7, 9, 12, 18, 24 - модельный ряд</h3>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity=sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2 crossorigin=anonymous></script>
 <script src=https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js integrity=sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN crossorigin=anonymous></script>
 <script src=https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js integrity=sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF crossorigin=anonymous></script><script src=./js/wow.min.js></script>
-<script>$('.fadeInOnLoad').css('opacity',0),$(window).on('load',function(){$('.fadeInOnLoad').delay(700).fadeTo("slow",1)}),new WOW({mobile:!1}).init(),$('.feature-note .plus-icon .plus').on('click',function(){console.log("plus clicked"),$(this).parents('.feature-note').hasClass('show-cont')?$(this).parents('.feature-note').removeClass('show-cont'):$(this).parents('.feature-note').addClass('show-cont')})</script></html>
+<script>$('.fadeInOnLoad').css('opacity',0),$(window).on('load',function(){$('.fadeInOnLoad').delay(700).fadeTo("slow",1),new WOW({mobile:!1}).init(),$('body').scrollspy({target:'#main-navbar',offset:100}),$('nav a[href^="#"]:not([href="#"]), .back_to_top, .explore').on('click',function(a){var b=$(this);$('html, body').stop().animate({scrollTop:$(b.attr('href')).offset().top-70},1500),a.preventDefault()}),$(window).scroll(function(){var a=$(window).scrollTop();a>=99?$(".navbar-default").addClass("is-scrolling"):$(".navbar-default").removeClass("is-scrolling")}),$(window).scroll(function(){$(window).scrollTop()>1e3?$('.back_to_top').fadeIn('slow'):$('.back_to_top').fadeOut('slow')}),$('.feature-note .plus-icon .plus').on('click',function(){console.log("plus clicked"),$(this).parents('.feature-note').hasClass('show-cont')?$(this).parents('.feature-note').removeClass('show-cont'):$(this).parents('.feature-note').addClass('show-cont')})})</script></html>
